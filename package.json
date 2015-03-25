@@ -1,0 +1,38 @@
+{
+  "name": "pgtiles",
+  "version": "0.0.1",
+  "description": "Create postgresql schema to for vector tiles",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.x"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apburnes/node-pgtiles"
+  },
+  "keywords": [
+    "vector",
+    "tiles",
+    "map",
+    "postgis",
+    "pg",
+    "postgreql"
+  ],
+  "author": "apburnes <bizzurnzz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apburnes/node-pgtiles/issues"
+  },
+  "homepage": "https://github.com/apburnes/node-pgtiles",
+  "dependencies": {
+    "lodash": "^3.5.0",
+    "pg.js": "^4.1.1"
+  },
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "mocha": "^2.2.1"
+  }
+}
