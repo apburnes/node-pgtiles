@@ -5,7 +5,7 @@ var create = require('./lib/create');
 var rollback = require('./lib/rollback');
 
 function pgTiles(connString) {
-  if (!(instanceof pgTiles)) {
+  if (!(this instanceof pgTiles)) {
     return new pgTiles(connString);
   }
 
@@ -36,14 +36,15 @@ pgTiles.prototype.query = function(sql, callback) {
 }
 
 pgTiles.prototype.create = function(callback) {
-  var query = this.query;
+  var self = this;
+  var query = pgTiles.prototype.query;
 
   create(function(err, sql) {
     if (err) {
       return callback(err);
     }
 
-    query(sql, function(error, result) {
+    query.call(self, sql, function(error, result) {
       if (err) {
         return callback(error);
       }
@@ -54,14 +55,15 @@ pgTiles.prototype.create = function(callback) {
 }
 
 pgTiles.prototype.rollback = function(callback) {
-  var query = this.query;
+  var self = this;
+  var query = pgTiles.prototype.query;
 
   rollback(function(err, sql) {
     if (err) {
       return callback(err);
     }
 
-    query(sql, function(error, result) {
+    query.call(self, sql, function(error, result) {
       if (error) {
         return callback(error);
       }

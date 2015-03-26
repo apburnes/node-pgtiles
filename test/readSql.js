@@ -1,8 +1,7 @@
 'use strict';
 
 var path = require('path');
-var chai = require('chai');
-var expect = chai.expect;
+var expect = require('chai').expect;
 var readSql = require('../lib/readSql');
 
 var textFile1 = path.join(__dirname, './fixtures/text1.txt');
