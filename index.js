@@ -30,6 +30,7 @@ pgTiles.prototype.query = function(sql, callback) {
         return handelError(error);
       }
 
+      done();
       return callback(null, result);
     });
   });

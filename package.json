@@ -1,6 +1,6 @@
 {
   "name": "pgtiles",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create postgresql schema to for vector tiles",
   "main": "index.js",
   "engines": {
@@ -29,7 +29,8 @@
   "homepage": "https://github.com/apburnes/node-pgtiles",
   "dependencies": {
     "lodash": "^3.5.0",
-    "pg.js": "^4.1.1"
+    "pg.js": "^4.1.1",
+    "postgis-vt-util": "^0.2.0"
   },
   "devDependencies": {
     "chai": "^2.1.2",
